@@ -45,25 +45,26 @@ fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 #Output it the screen as table
 streamlit.dataframe(fruityvice_normalized)
 
+import snowflake.connector
+
+
 
 
     
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 streamlit.stop()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import requests
 #Create the repeatable code block (called a function)
 def get_fruityvice_data(this_fruit_choice):
@@ -84,7 +85,7 @@ except URLError as e:
     streamlit.error()
 
 
-import snowflake.connector
+
 
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
