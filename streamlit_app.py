@@ -76,13 +76,7 @@ fruit_choice = streamlit.text_input('What fruit would you like to add?','jackfru
 streamlit.write('Thank you for adding ', fruit_choice)
 
 
-#This will not work correctly but just go with it for now
-my_cur.execute("insert into fruit_load_list values('from streamlit')")
 
-
-import requests
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
-streamlit.text(fruityvice_response)
 
 
 
